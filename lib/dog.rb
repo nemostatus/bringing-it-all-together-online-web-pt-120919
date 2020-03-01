@@ -78,6 +78,6 @@ def update
   sql = <<-SQL
   UPDATE dogs SET name = ?, breed = ?, WHERE id = ?
   SQL
-DB[:conn].execute
+DB[:conn].execute(sql,name.self,breed.self)
 end
 end 
